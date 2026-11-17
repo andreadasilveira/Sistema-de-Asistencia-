@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estudiante - Asistencia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #fce7f3;
+            text-align: center; 
+            padding-top: 100px; 
+            margin: 0;
+            color: #333;
+        }
+        h1 {
+            color: #000000;
+            font-size: 22px;
+            margin-top: 0;
+        }
+        p {
+            color: #475569;
+            font-size: 15px;
+        }
+        button { 
+            padding: 8px 16px; 
+            background: #d6759e;
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 4px; 
+            margin-top: 15px; 
+            font-size: 13px;
+        }
+    </style>
+    <script>
+        if (localStorage.getItem("sesion") !== "user") {
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="caja" style="margin-top: 200px;">
+        <h1>Bienvenido Estudiante</h1>
+        <p>Ingresaste correctamente al sistema.</p>
+        <button onclick="localStorage.clear(); window.location.href='index.html';">Cerrar Sesión</button>
+    </div>
+</body>
+</html>

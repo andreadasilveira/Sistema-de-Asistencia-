@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Asistencia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #fce7f3;
+            margin: 0; 
+            padding: 20px; 
+            color: #333;
+        }
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 10px 0; 
+            border-bottom: 2px solid #f472b6;
+            margin-bottom: 15px;
+        }
+        h1 { 
+            margin: 0; 
+            font-size: 20px; 
+            color: #be185d; 
+        }
+        .btn-salir { 
+            background: #e11d48; 
+            color: white; 
+            border: none; 
+            padding: 6px 12px; 
+            cursor: pointer; 
+            border-radius: 4px; 
+            font-size: 13px;
+        }
+        .btn-salir:hover {
+            background: #be185d;
+        }
+        .contenedor-lista { 
+            margin-top: 10px; 
+        }
+        h3 {
+            font-size: 16px;
+            color: #831843;
+            margin-bottom: 10px;
+        }
+        .fila { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 6px 4px; 
+            border-bottom: 1px solid #fbcfe8; 
+            align-items: center; 
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        if (localStorage.getItem("sesion") !== "admin") {
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Asistencia</h1>
+        <button class="btn-salir" onclick="localStorage.clear(); window.location.href='index.html';">Cerrar Sesión</button>
+    </header>
+    <div class="contenedor-lista">
+        <h3>Lista</h3>
+        <div id="cajaAlumnos"></div>
+    </div>
+    <script src="prece.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión - Asistencia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #fce7f3;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            color: #333;
+        }
+        h2 { 
+            text-align: center; 
+            color: #000000; 
+            margin-top: 0;
+            font-size: 22px;
+        }
+        label { 
+            display: block; 
+            margin-top: 10px; 
+            font-weight: bold; 
+            font-size: 14px;
+            color: #000000;
+        }
+        input { 
+            width: 100%; 
+            padding: 8px; 
+            margin-top: 5px; 
+            box-sizing: border-box; 
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #000000;
+        }
+        button { 
+            width: 100%; 
+            padding: 10px; 
+            background: #d6759e;
+            color: white; 
+            border: none; 
+            margin-top: 15px; 
+            cursor: pointer; 
+            border-radius: 4px; 
+            font-weight: bold;
+        }
+        #error { 
+            color: #d6759e; 
+            text-align: center; 
+            font-size: 14px; 
+            margin-top: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="caja">
+        <h2>Iniciar Sesión</h2>
+        <form id="formLogin">
+            <label>Usuario</label>
+            <input type="text" id="usuario" required>
+            <label>Contraseña</label>
+            <input type="password" id="password" required>
+            <button type="submit">Ingresar</button>
+            <p id="error"></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
