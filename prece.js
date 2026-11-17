@@ -1,4 +1,4 @@
-let alumnos = ["uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho"];
+let alumnos = ["Piccini Ziomara", "Da Silveira Andrea", "Fernandez Martin" , "Salazar Camila", "Pessini Benjamin", "Vera Mia", "Barrios Dulce"];
 let asistencias = JSON.parse(localStorage.getItem("asistencias")) || {};
 let contenedor = document.getElementById("cajaAlumnos");
 for (let i = 0; i < alumnos.length; i++) {
